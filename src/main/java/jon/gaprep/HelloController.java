@@ -1,6 +1,5 @@
 package jon.gaprep;
 
-import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,5 +14,6 @@ public class HelloController {
     public ResponseEntity<Greeting> getHello(){
         Greeting g = new Greeting("hi from server", new Date());
         return new ResponseEntity<>(g, HttpStatus.OK);
+        // Jackson (from Spring Boot Web) is used to convert object to JSON
     }
 }
