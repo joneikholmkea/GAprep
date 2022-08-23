@@ -16,7 +16,7 @@ public class PersonController {
 
     public PersonController(PersonService personService) {
         this.personService = personService;
-        personService.save(new Person("ole"));
+        //personService.save(new Person("ole"));
     }
 
     @GetMapping("/persons")
