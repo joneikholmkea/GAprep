@@ -1,5 +1,6 @@
-package jon.gaprep;
+package jon.gaprep.controller;
 
+import jon.gaprep.model.Greeting;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

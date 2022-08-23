@@ -1,13 +1,14 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - GAprepService
-
+name: Build and deploy JAR app to Azure Web App - GAprepService  # the whole yml file is a list of key-value pairs
+# here first key is name, second is on. And so on.
+# After indent of 2 spaces starts a new scope, with key-value pairs.
 on:
   push:
     branches:
-      - master
-  workflow_dispatch:
+      - master  # a hyphen - starts a list
+  workflow_dispatch: # manually launch jobs
 
 jobs:
   build:
@@ -33,7 +34,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: build # clever, it depends upon the job 'build' from above
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}

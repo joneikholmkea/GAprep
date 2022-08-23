@@ -1,4 +1,4 @@
-package jon.gaprep;
+package jon.gaprep.model;
 
 import java.util.*;
 
