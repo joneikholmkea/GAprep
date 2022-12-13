@@ -17,7 +17,7 @@ public class HelloController {
 
     @GetMapping("/")
     public ResponseEntity<Greeting> getHello(){
-        System.out.println("greeting controller Java message");
+        System.out.println("greeting controller Java message - december");
         Greeting g = new Greeting("hi from server at Azure", new Date());
         return new ResponseEntity<>(g, HttpStatus.OK);
         // Jackson (from Spring Boot Web) is used to convert object to JSON
